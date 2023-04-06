@@ -15,11 +15,13 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import {AngularFireModule} from "@angular/fire/compat";
+import { IsLoggedInPipe } from './pipe/is-logged-in.pipe';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IsLoggedInPipe
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,7 @@ import {AngularFireModule} from "@angular/fire/compat";
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
   ],
-  providers: [],
+  providers: [IsLoggedInPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

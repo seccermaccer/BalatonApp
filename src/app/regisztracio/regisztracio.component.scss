@@ -1,0 +1,31 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 50vw;
+  margin-left: 20vw;
+  margin-top: 15vh;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 16px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-input {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 767px) {
+  .register-card {
+    max-width: 90%;
+    padding: 16px 8px;
+  }
+}

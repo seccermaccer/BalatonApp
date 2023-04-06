@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../shared/services/auth.service";
 import {Router} from "@angular/router";
+import {IsLoggedInPipe} from "../pipe/is-logged-in.pipe";
 
 @Component({
   selector: 'app-bejelentkezes',
@@ -12,10 +13,10 @@ export class BejelentkezesComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,private authServices: AuthService,private router: Router) {
+  constructor(private formBuilder: FormBuilder,private authServices: AuthService,private router: Router,private pipe: IsLoggedInPipe) {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+      password: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
 

@@ -32,13 +32,13 @@
 
 
 
-      <div >
+      <div *ngIf="!currentUser">
         <button mat-button routerLink="/bejelentkezes">Bejelentkezés</button>
       </div>
-      <div >
-        <button mat-button >Kilépés</button>
+      <div *ngIf="currentUser">
+        <button (click)="logout()" mat-button >Kilépés</button>
       </div>
-      <div >
+      <div *ngIf="!currentUser">
         <button mat-button routerLink="/regisztracio">Regisztráció</button>
       </div>
 
