@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "balatonapp": {
+      "hosting": {
+        "my-app": [
+          "balatonapp"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "balatonapp"
+  }
+}
