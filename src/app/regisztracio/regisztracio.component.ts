@@ -35,7 +35,7 @@ export class RegisztracioComponent implements OnInit {
       this.authS.signUp(email,password).then(cred => {
         console.log("Sikeres regisztráció");
         window.alert("Sikeres regisztráció!");
-        this.router.navigate(['osszes']);
+        this.router.navigate(['profil']);
 
         const user: User = {
           id: cred.user?.uid as string,

@@ -9,8 +9,8 @@
     <mat-toolbar>Menü</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/osszes">Összes látnivaló</a>
-      <a mat-list-item routerLink="/concert-posts">Zamárdi</a>
-      <a mat-list-item routerLink="/instrument-posts">Balatonfüred</a>
+      <a mat-list-item routerLink="/zamardi">Zamárdi</a>
+      <a mat-list-item routerLink="/balatonfured">Balatonfüred</a>
       <a  mat-list-item routerLink="/create-post">Véleményezés</a>
 
     </mat-nav-list>
@@ -34,6 +34,9 @@
 
       <div *ngIf="!currentUser">
         <button mat-button routerLink="/bejelentkezes">Bejelentkezés</button>
+      </div>
+      <div *ngIf="currentUser">
+        <button mat-button routerLink="/profil">Profil</button>
       </div>
       <div *ngIf="currentUser">
         <button (click)="logout()" mat-button >Kilépés</button>

@@ -1,0 +1,13 @@
+<div class="card-container" *ngFor="let spot of spots$ | async">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>{{ spot.name }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="spot.imageUrl" alt="Spot Image">
+    <mat-card-content>
+      <p>{{ spot.leiras }}</p>
+      <p>Helyszín: {{ spot.location }}</p>
+    </mat-card-content>
+    <button mat-button class="custom-mat-button" color="primary" raised>Vélemények</button>
+  </mat-card>
+</div>

@@ -26,4 +26,8 @@ export class UserService {
   delete(userId: string) {
     return this.afs.collection<User>(this.collectionName).doc(userId).delete();
   }
+
+  getById(id: string){
+    return this.afs.collection<User>(this.collectionName).doc(id).valueChanges();
+  }
 }

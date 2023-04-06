@@ -33,4 +33,8 @@ export class AuthService {
   logout(){
     return this.auth.signOut();
   }
+
+  isUserLoggedIn(){
+    return this.auth.user;
+  }
 }
