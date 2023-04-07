@@ -11,7 +11,7 @@
       <a mat-list-item routerLink="/osszes">Összes látnivaló</a>
       <a mat-list-item routerLink="/zamardi">Zamárdi</a>
       <a mat-list-item routerLink="/balatonfured">Balatonfüred</a>
-      <a  mat-list-item routerLink="/create-post">Véleményezés</a>
+      <a *ngIf="currentUser"  mat-list-item routerLink="/velemenyezes">Véleményezés</a>
 
     </mat-nav-list>
   </mat-sidenav>
@@ -26,7 +26,7 @@
 
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>BalatonApp</span>
+      <span id="cursor" routerLink="osszes">BalatonApp</span>
 
       <span class="spacer"></span>
 

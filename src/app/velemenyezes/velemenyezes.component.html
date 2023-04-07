@@ -1,0 +1,22 @@
+<div class="container">
+  <mat-card class="comment-card">
+    <form [formGroup]="commentForm">
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Felhasználónév</mat-label>
+        <input matInput formControlName="username" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Helyszín</mat-label>
+        <input matInput formControlName="spotname" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Komment</mat-label>
+        <textarea matInput formControlName="comment"></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="onSubmit()">Beküldés</button>
+    </form>
+  </mat-card>
+</div>
