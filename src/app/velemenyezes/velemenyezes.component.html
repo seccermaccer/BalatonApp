@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container" *ngIf="user">
   <mat-card class="comment-card">
     <form [formGroup]="commentForm">
       <mat-form-field appearance="outline" class="input-field">
         <mat-label>Felhasználónév</mat-label>
-        <input matInput formControlName="username" />
+        <input matInput formControlName="username" [ngModel]="user.username" />
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="input-field">

@@ -3,6 +3,8 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {VelemenyService} from "../shared/services/velemeny.service";
 import {Opinion} from "../shared/models/Opinion";
+import {UserService} from "../shared/services/user.service";
+import {User} from "../shared/models/User";
 
 @Component({
   selector: 'app-velemenyezes',
@@ -13,7 +15,9 @@ export class VelemenyezesComponent implements OnInit {
 
   commentForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,private router: Router,private commentS: VelemenyService) {
+  user?: User;
+
+  constructor(private formBuilder: FormBuilder,private router: Router,private commentS: VelemenyService,private userS: UserService) {
     this.commentForm = this.formBuilder.group({
       username: ['', Validators.required],
       spotname: ['', Validators.required],
@@ -24,6 +28,12 @@ export class VelemenyezesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    const user = JSON.parse(localStorage.getItem('user') as string) as firebase.default.User;
+    this.userS.getById(user.uid).subscribe(data => {
+      this.user = data;
+    },error => {
+      console.error(error);
+    })
   }
 
   onSubmit(){
