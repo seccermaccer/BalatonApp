@@ -14,7 +14,12 @@ const routes: Routes = [
   { path: 'balatonfured', loadChildren: () => import('./balatonfured/balatonfured.module').then(m => m.BalatonfuredModule) },
   { path: 'profil', loadChildren: () => import('./profil/profil.module').then(m => m.ProfilModule) },
   { path: 'velemenyezes', loadChildren: () => import('./velemenyezes/velemenyezes.module').then(m => m.VelemenyezesModule) },
-  { path: 'update-profil', loadChildren: () => import('./update-profil/update-profil.module').then(m => m.UpdateProfilModule) }
+  { path: 'update-profil', loadChildren: () => import('./update-profil/update-profil.module').then(m => m.UpdateProfilModule) },
+  { path: 'not-found', loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule) },
+  { path: 'velemenyek/:spotname', loadChildren: () => import('./velemenyek/velemenyek.module').then(m => m.VelemenyekModule) },
+  { path: '**',
+    redirectTo: '/not-found'
+  }
 ];
 
 @NgModule({

@@ -1,9 +1,10 @@
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
   padding: 0 16px;
+  padding-top: 150px;
 }
 
 .profile-card {
@@ -18,6 +19,6 @@
 
 @media screen and (max-width: 767px) {
   .container {
-    padding: 0;
+
   }
 }
