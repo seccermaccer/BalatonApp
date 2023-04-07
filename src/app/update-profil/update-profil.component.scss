@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 16px;
+}
+
+.profile-card {
+  max-width: 500px;
+  width: 100%;
+}
+
+.input-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0;
+  }
+}

@@ -20,7 +20,7 @@ export class UserService {
   }
 
   update(user: User) {
-    return this.afs.collection<User>(this.collectionName).doc(user.id).update(user);
+    return this.afs.collection<User>(this.collectionName).doc(user.id).set(user);
   }
 
   delete(userId: string) {

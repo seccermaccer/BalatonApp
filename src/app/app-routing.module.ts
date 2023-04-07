@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'zamardi', loadChildren: () => import('./zamardi/zamardi.module').then(m => m.ZamardiModule) },
   { path: 'balatonfured', loadChildren: () => import('./balatonfured/balatonfured.module').then(m => m.BalatonfuredModule) },
   { path: 'profil', loadChildren: () => import('./profil/profil.module').then(m => m.ProfilModule) },
-  { path: 'velemenyezes', loadChildren: () => import('./velemenyezes/velemenyezes.module').then(m => m.VelemenyezesModule) }
+  { path: 'velemenyezes', loadChildren: () => import('./velemenyezes/velemenyezes.module').then(m => m.VelemenyezesModule) },
+  { path: 'update-profil', loadChildren: () => import('./update-profil/update-profil.module').then(m => m.UpdateProfilModule) }
 ];
 
 @NgModule({

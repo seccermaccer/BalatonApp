@@ -21,7 +21,7 @@ export class VelemenyService {
   }
 
   update(opinion: Opinion) {
-    return this.afs.collection<Opinion>(this.collectionName).doc(opinion.id).update(opinion);
+    return this.afs.collection<Opinion>(this.collectionName).doc(opinion.id).set(opinion);
   }
 
   delete(opinionId: string) {

@@ -1,0 +1,25 @@
+<div class="container" *ngIf="user">
+  <mat-card class="profile-card">
+    <form [formGroup]="updateForm">
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Felhasználónév</mat-label>
+        <input matInput formControlName="username" />
+      </mat-form-field>
+
+      <div formGroupName="name">
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Vezetéknév</mat-label>
+          <input matInput formControlName="firstname"  />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Keresztnév</mat-label>
+          <input matInput formControlName="lastname" />
+        </mat-form-field>
+      </div>
+
+      <button mat-raised-button color="primary" (click)="onSubmit()">Mentés</button>
+    </form>
+  </mat-card>
+</div>
+

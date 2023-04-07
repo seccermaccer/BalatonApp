@@ -30,7 +30,7 @@ export class BejelentkezesComponent implements OnInit {
       this.authServices.login(email,password).then(() => {
         console.log("Sikeres belépés!");
         window.alert("Sikeres bejelentkezés!")
-        this.router.navigate(['profil'])
+        this.router.navigate(['osszes'])
 
       }).catch(error => {
         console.error(error);
